@@ -7,7 +7,7 @@ const letterText = `
 
 Happy Valentine’s Day, Baby!
 
-I know we’re celebrating this day miles apart, and if I’m being honest, I wish I could sit beside you right now — kahit tahimik lang, kahit walang ginagawa. Pero habang hindi pa, I made something small for you. Not because I have to impress you, but because you deserve something made with effort and intention.
+I know we’re celebrating this day miles apart, and if I’m being honest, I wish I could sit beside you right now — kahit tahimik lang, kahit walang ginagawa. Pero habang hindi pa, I made something small for you. Not because I have to impress you (ofc I want to impress you baby, tho ito lang kinaya ng time), but because you deserve something made with effort and intention.
 
 Thank you for choosing me — especially on the days when you’re tired, overwhelmed, or doubting yourself. Alam ko hindi madali ang lahat ngayon. Your schedule is crazy, your mind is full, and your body is exhausted. But even in that state, you still love. And that says so much about your heart.
 
@@ -15,7 +15,7 @@ I want you to know na I don’t love you because you’re strong. I don’t love
 
 Distance is hard sometimes, I won’t lie. I miss your presence — the kind na hindi natin kailangan magsalita, where just being beside you feels safe, and warm.. But even from here, I’m choosing you. Not out of need. Not out of fear. But because I genuinely want you, Chai.
 
-I’m proud of you baby. For how you keep showing up despite everything.
+I’m proud of you my baby. For how you keep showing up despite everything.
 
 Soon, we’ll celebrate Valentine’s without screens and signal issues, without saying "putol-putol" HAHAHAHA. But for now, this is us — two people trying, choosing, loving, even across distance. And that means something. It always means something.
 
@@ -446,6 +446,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
