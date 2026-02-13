@@ -11,24 +11,22 @@ I know we’re celebrating this day miles apart, and if I’m being honest, I wi
 
 Thank you for choosing me — especially on the days when you’re tired, overwhelmed, or doubting yourself. Alam ko hindi madali ang lahat ngayon. Your schedule is crazy, your mind is full, and your body is exhausted. But even in that state, you still love. And that says so much about your heart.
 
-I want you to know this clearly:
+I want you to know na I don’t love you because you’re strong. I don’t love you because you can handle everything. I love you because you’re you — even when you feel weak, even when you’re unsure, even kapag masungit ka :P
 
-I don’t love you because you’re strong.
-I don’t love you because you can handle everything.
-I love you because you’re you — even when you feel weak, even when you’re unsure, even kapag masungit ka :P
+Distance is hard sometimes, I won’t lie. I miss your presence — the kind na hindi natin kailangan magsalita, where just being beside you feels safe, and warm.. But even from here, I’m choosing you. Not out of need. Not out of fear. But because I genuinely want you, Chai.
 
-Distance is hard sometimes, I won’t lie. I miss your presence — the kind where we don’t need to talk, where just being beside you feels safe. But even from here, I’m choosing you. Not out of need. Not out of fear. But because I genuinely want you.
+I’m proud of you baby. For how you keep showing up despite everything.
 
-I’m proud of you. Not just for what you achieve — but for how you keep showing up despite everything.
-
-Someday, we’ll celebrate Valentine’s without screens and signal issues. But for now, this is us — two people trying, choosing, loving, even across distance. And that means something.
+Soon, we’ll celebrate Valentine’s without screens and signal issues, without saying "putol-putol" HAHAHAHA. But for now, this is us — two people trying, choosing, loving, even across distance. And that means something. It always means something.
 
 Thank you for being my person.
 
 I’m here.
 And I’m not going anywhere.
 
-Happy Valentine’s Day, my love.🤍
+Salamat, ikaw 'to.
+
+See you soon, my love.🤍
 
 Yours,
 Julia
@@ -362,7 +360,9 @@ function typeLetter() {
     "You’re my calm… and sometimes my chaos. I like both ;)",
     "Imagine when we don’t need Wi-Fi to say goodnight.",
     "You don’t even know how much I adore you. Or maybe you do.",
-    "I've never loved anyone the way I love you, Chai."
+    "I've never loved anyone the way I love you, Chai.",
+    "Hi Miss, pa-kiss.",
+    "Ikaw lang, palagi baby."
   ];
 
   let affirmationIndex = -1;
@@ -379,7 +379,7 @@ function typeLetter() {
     const content = document.getElementById("affirmationContent");
 
     card.classList.remove("revealed");
-    content.textContent = "Click Me 💌";
+    content.textContent = "Click Here Baby 💌";
   };
 
   window.closeAffirmationModal = function () {
@@ -446,6 +446,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
