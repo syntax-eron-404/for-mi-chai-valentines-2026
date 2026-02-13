@@ -1,0 +1,128 @@
+/* ==========================
+   🌸 GLOBAL STYLES
+========================== */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #fff0f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  padding: 20px; /* extra padding for small devices */
+  box-sizing: border-box;
+}
+
+/* ==========================
+   🌸 LOGIN CARD
+========================== */
+.login-card {
+  background: white;
+  padding: clamp(30px, 5vw, 50px);
+  border-radius: 30px;
+  text-align: center;
+  width: clamp(280px, 90%, 400px); /* responsive width */
+  box-shadow: 0 20px 50px rgba(255, 105, 135, 0.2);
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 60px rgba(255, 105, 135, 0.25);
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* ==========================
+   🌸 HEADINGS
+========================== */
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 25px;
+}
+
+/* ==========================
+   🌸 INPUT FIELDS
+========================== */
+input {
+  width: 100%;
+  padding: clamp(10px, 2vw, 14px);
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1px solid #ffd6e0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  box-sizing: border-box;
+}
+
+/* ==========================
+   🌸 BUTTON
+========================== */
+button {
+  background: #ff8fab;
+  border: none;
+  padding: clamp(10px, 2vw, 14px);
+  width: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff4d6d;
+  transform: scale(1.03);
+}
+
+/* ==========================
+   🌸 ERROR TEXT
+========================== */
+#error {
+  color: #ff4d6d;
+  font-size: clamp(12px, 1.5vw, 14px);
+  margin-top: 5px;
+}
+
+/* ==========================
+   🌸 RESPONSIVE MEDIA QUERIES
+========================== */
+
+/* Small phones (~320px-414px) */
+@media (max-width: 414px) {
+  .login-card {
+    padding: 25px;
+    width: 90%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium phones (~415px-600px) */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 30px;
+    width: 95%;
+  }
+}
+
+/* Tablets (~601px-900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .login-card {
+    width: 400px;
+  }
+}
+
+/* Desktops (~901px and up) */
+@media (min-width: 901px) {
+  .login-card {
+    width: 380px;
+  }
+}

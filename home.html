@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine's Day, Mi Chai 💜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Pacifico&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  if (sessionStorage.getItem("auth") !== "true") {
+    window.location.replace("index.html");
+  }
+</script>
+
+<body>
+
+<h1>Our First Valentines Day</h1>
+<p class="valentine-date">February 14, 2026</p>
+
+<button class="logout-icon" onclick="logout()" title="Logout">
+  <!-- SVG logout icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+    <path d="M16 13v-2H7V8l-5 4 5 4v-3zM20 3h-8v2h8v14h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+  </svg>
+</button>
+
+
+
+<div class="top-widgets">
+
+  <div class="music-widget">
+    <img id="albumCover" src="assets/music/cover1.jpg">
+    <div class="music-info">
+      <div id="songTitle">Song Title</div>
+      <div id="songArtist">Artist</div>
+    </div>
+
+  <div class="music-controls">
+    <!-- Previous -->
+    <button onclick="prevSong()" aria-label="Previous">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="5" width="2" height="14"></rect>
+        <polygon points="18,5 8,12 18,19"></polygon>
+      </svg>
+    </button>
+
+    <!-- Play -->
+    <button onclick="togglePlay()" id="playBtn" aria-label="Play">
+      <svg viewBox="0 0 24 24">
+        <polygon points="8,5 19,12 8,19"></polygon>
+      </svg>
+    </button>
+
+    <!-- Next -->
+    <button onclick="nextSong()" aria-label="Next">
+      <svg viewBox="0 0 24 24">
+        <polygon points="6,5 16,12 6,19"></polygon>
+        <rect x="18" y="5" width="2" height="14"></rect>
+      </svg>
+    </button>
+  </div>
+
+    <audio id="audioPlayer"></audio>
+  </div>
+
+  <div class="countdown-widget">
+    <h2>Our 1st Monthsary Countdown</h2>
+    <div class="countdown-grid">
+      <div><span id="days">0</span><br>Days</div>
+      <div><span id="hours">0</span><br>Hours</div>
+      <div><span id="minutes">0</span><br>Minutes</div>
+      <div><span id="seconds">0</span><br>Seconds</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="dashboard">
+
+  <div class="card envelope-card">
+    <h2>A Letter For You</h2>
+
+    <div class="envelope-wrapper" onclick="openLetter()">
+      <div class="envelope" id="mainEnvelope">
+        <div class="envelope-flap"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter-modal" id="letterModal">
+    <div class="letter-popup" onclick="closeLetter()">
+      <div class="letter-content" onclick="event.stopPropagation()">
+        <span class="letter-close" onclick="closeLetter()">✕</span>
+        <div id="typedLetter"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card photobooth-card">
+    <h2>You and I</h2>
+
+    <div class="photobooth">
+      <div class="photobooth-strip">
+        <img src="assets/photos/p1.JPG" onclick="openImage(this); event.stopPropagation();">
+        <img src="assets/photos/p2.JPG" onclick="openImage(this); event.stopPropagation();">
+        <img src="assets/photos/p3.JPG" onclick="openImage(this); event.stopPropagation();">
+        <img src="assets/photos/p4.JPG" onclick="openImage(this); event.stopPropagation();">
+      </div>
+
+      <div class="photobooth-caption">
+        chai & jul &lt;3
+      </div>
+    </div>
+  </div>
+
+  <div id="imageModal" class="image-modal">
+    <div class="modal-frame">
+      <span class="close-btn" onclick="closeImage()">×</span>
+      
+      <div class="polaroid">
+        <img id="modalImg">
+        <div class="caption">01-31-26</div>
+      </div>
+
+      <div class="modal-controls">
+        <button onclick="prevImage()">❮</button>
+        <button onclick="nextImage()">❯</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card voice-note-card">
+    <h2>Voice Note for You</h2>
+    <div class="voice-note-container">
+      <button class="voice-play-btn" id="voicePlayBtn" aria-label="Play voice note">
+        <svg class="play-icon" viewBox="0 0 24 24">
+          <polygon points="8,5 19,12 8,19"></polygon>
+        </svg>
+
+        <svg class="pause-icon" viewBox="0 0 24 24">
+          <rect x="6" y="5" width="4" height="14"></rect>
+          <rect x="14" y="5" width="4" height="14"></rect>
+        </svg>
+      </button>
+    </div>
+    <audio id="voiceAudio" src="assets/music/voice1.mp3"></audio>
+  </div>
+
+  <div class="card didyouknow-card">
+    <h2>Did You Know?</h2>
+    <p>I hope you know.</p>
+    <button class="cute-btn" onclick="openAffirmationModal()">
+      Open It
+    </button>
+  </div>
+
+  <div class="affirmation-modal" id="affirmationModal">
+    <div class="affirmation-container">
+      <span class="affirmation-close"
+        onclick="closeAffirmationModal()">✖</span>
+
+      <div class="affirmation-card"
+        onclick="handleAffirmationClick()">
+        <div id="affirmationContent">
+          Hi Baby! Click here 💌
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>March 1 Surprise</h2>
+    <p>Wait baby to unlock ;)</p>
+    <button id="lockedBtn" onclick="openLocked()">Locked</button>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="reveal-modal" id="revealModal">
+    <div class="reveal-content">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <h1>Happy Monthsary, Baby!</h1>
+      <p>Kiss me 10 times to reveal the surprise 💖</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
