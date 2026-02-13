@@ -24,7 +24,7 @@ Thank you for being my person.
 I’m here.
 And I’m not going anywhere.
 
-Salamat, ikaw 'to.
+Salamat, ikaw 'to. Padaba taka, Chai.
 
 See you soon, my love.🤍
 
@@ -446,6 +446,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
