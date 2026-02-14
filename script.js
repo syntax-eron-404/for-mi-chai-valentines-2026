@@ -222,7 +222,7 @@ function typeLetter() {
     musicIndex = (musicIndex - 1 + songs.length) % songs.length;
     loadSong(musicIndex);
     audio.play();
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   };
 
   if (audio) {
@@ -426,6 +426,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
