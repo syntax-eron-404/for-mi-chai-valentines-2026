@@ -215,7 +215,7 @@ function typeLetter() {
     musicIndex = (musicIndex + 1) % songs.length;
     loadSong(musicIndex);
     audio.play();
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   };
 
   window.prevSong = function () {
@@ -280,26 +280,6 @@ function typeLetter() {
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 1000);
   });
-
-
-  // /* ===============================
-  //    🎈 FLOATING BALLOONS
-  // =============================== */
-
-  // function createBalloon() {
-  //   const balloon = document.createElement("div");
-  //   balloon.className = "balloon";
-  //   balloon.innerHTML = "💖";
-
-  //   balloon.style.left = Math.random() * 100 + "vw";
-  //   balloon.style.animationDuration = 6 + Math.random() * 5 + "s";
-
-  //   document.body.appendChild(balloon);
-  //   setTimeout(() => balloon.remove(), 10000);
-  // }
-
-  // setInterval(createBalloon, 1200);
-
 
   /* ===============================
      🖼 IMAGE MODAL
@@ -446,6 +426,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
