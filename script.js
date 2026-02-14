@@ -413,7 +413,7 @@ function typeLetter() {
 
 });
 
-const targetDate = new Date('2026-03-01T00:00:00'); // March 1
+const targetDate = new Date('2026-02-14T00:00:00'); // March 1
 
 function openLocked() {
   if (new Date() >= targetDate) {
@@ -426,6 +426,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
