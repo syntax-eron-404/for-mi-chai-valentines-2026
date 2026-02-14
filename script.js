@@ -56,7 +56,7 @@ window.openLetter = function () {
   // Play music only if paused
   if (audio.paused) {
     audio.play().catch(() => {});
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   }
 
   setTimeout(typeLetter, 500);
@@ -426,6 +426,7 @@ function openLocked() {
 function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
+
 
 
 
