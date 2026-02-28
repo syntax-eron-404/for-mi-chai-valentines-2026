@@ -359,9 +359,9 @@ function typeLetter() {
     "You’re my calm… and sometimes my chaos. I like both ;)",
     "Imagine when we don’t need Wi-Fi to say goodnight.",
     "You don’t even know how much I adore you. Or maybe you do.",
-    "I've never loved anyone the way I love you, Chai."
-    "You look extra cute when you pretend you’re not."
-    "Ikaw ang pinakapaborito kong asarin pero hindi ko inaasar :P"
+    "I've never loved anyone the way I love you, Chai.",
+    "You look extra cute when you pretend you’re not.",
+    "Ikaw ang pinakapaborito kong asarin pero hindi ko inaasar :P",
     "You're hotter than you think ;)"
   ];
 
@@ -459,3 +459,4 @@ function goToMonthsary() {
     window.location.href = "first-monthsary.html";
   }, 400);
 }
+
