@@ -2,7 +2,7 @@ function login() {
   const user = document.getElementById("username").value.trim();
   const pass = document.getElementById("password").value.trim();
 
-  if (user === "mi chai" && pass === "020126") {
+  if (user === "mi chai" && pass === "balut") {
     sessionStorage.setItem("auth", "true");
     window.location.replace("home.html");
   } else {
@@ -10,3 +10,4 @@ function login() {
       "bBy quOh lg mkkpSok.. hu u???";
   }
 }
+
