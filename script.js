@@ -1,32 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ===============================
-     💌 VALENTINE LETTER + ENVELOPE
-  =============================== */
 const letterText = `
 
 Happy Valentine’s Day, Baby!
 
-I know we’re celebrating this day miles apart, and if I’m being honest, I wish I could sit beside you right now — kahit tahimik lang, kahit walang ginagawa. Pero habang hindi pa, I made something small for you. Not because I have to impress you (ofc I want to impress you baby, tho ito lang kinaya ng time), but because you deserve something made with effort and intention.
+I know we’re celebrating this day miles apart, and if I’m being honest, I wish I could sit beside you right now — kahit tahimik lang, kahit walang ginagawa. Pero habang hindi pa, I made something small for you. Not because I have to impress you, but because you deserve something made with effort and intention.
 
 Thank you for choosing me — especially on the days when you’re tired, overwhelmed, or doubting yourself. Alam ko hindi madali ang lahat ngayon. Your schedule is crazy, your mind is full, and your body is exhausted. But even in that state, you still love. And that says so much about your heart.
 
-I want you to know na I don’t love you because you’re strong. I don’t love you because you can handle everything. I love you because you’re you — even when you feel weak, even when you’re unsure, even kapag masungit ka :P
+I want you to know this clearly:
 
-Distance is hard sometimes, I won’t lie. I miss your presence — the kind na hindi natin kailangan magsalita, where just being beside you feels safe, and warm.. But even from here, I’m choosing you. Not out of need. Not out of fear. But because I genuinely want you, Chai.
+I don’t love you because you’re strong.
+I don’t love you because you can handle everything.
+I love you because you’re you — even when you feel weak, even when you’re unsure, even kapag masungit ka :P
 
-I’m proud of you my baby. For how you keep showing up despite everything.
+Distance is hard sometimes, I won’t lie. I miss your presence — the kind where we don’t need to talk, where just being beside you feels safe. But even from here, I’m choosing you. Not out of need. Not out of fear. But because I genuinely want you.
 
-Soon, we’ll celebrate Valentine’s without screens and signal issues, without saying "putol-putol" HAHAHAHA. But for now, this is us — two people trying, choosing, loving, even across distance. And that means something. It always means something.
+I’m proud of you. Not just for what you achieve — but for how you keep showing up despite everything.
+
+Someday, we’ll celebrate Valentine’s without screens and signal issues. But for now, this is us — two people trying, choosing, loving, even across distance. And that means something.
 
 Thank you for being my person.
 
 I’m here.
 And I’m not going anywhere.
 
-Salamat, ikaw 'to. Padaba taka, Chai.
-
-See you soon, my love.🤍
+Happy Valentine’s Day, my love.🤍
 
 Yours,
 Julia
@@ -56,7 +55,7 @@ window.openLetter = function () {
   // Play music only if paused
   if (audio.paused) {
     audio.play().catch(() => {});
-    document.getElementById("playBtn").innerText = "||";
+    document.getElementById("playBtn").innerText = "⏸";
   }
 
   setTimeout(typeLetter, 500);
@@ -196,7 +195,7 @@ function typeLetter() {
 
     if (audio.paused) {
       audio.play();
-      playBtn.innerText = "||";
+      playBtn.innerText = "⏸";
     } else {
       audio.pause();
       playBtn.innerText = "▶";
@@ -215,7 +214,7 @@ function typeLetter() {
     musicIndex = (musicIndex + 1) % songs.length;
     loadSong(musicIndex);
     audio.play();
-    document.getElementById("playBtn").innerText = "||";
+    document.getElementById("playBtn").innerText = "⏸";
   };
 
   window.prevSong = function () {
@@ -281,6 +280,26 @@ function typeLetter() {
     setTimeout(() => heart.remove(), 1000);
   });
 
+
+  // /* ===============================
+  //    🎈 FLOATING BALLOONS
+  // =============================== */
+
+  // function createBalloon() {
+  //   const balloon = document.createElement("div");
+  //   balloon.className = "balloon";
+  //   balloon.innerHTML = "💖";
+
+  //   balloon.style.left = Math.random() * 100 + "vw";
+  //   balloon.style.animationDuration = 6 + Math.random() * 5 + "s";
+
+  //   document.body.appendChild(balloon);
+  //   setTimeout(() => balloon.remove(), 10000);
+  // }
+
+  // setInterval(createBalloon, 1200);
+
+
   /* ===============================
      🖼 IMAGE MODAL
   =============================== */
@@ -340,9 +359,10 @@ function typeLetter() {
     "You’re my calm… and sometimes my chaos. I like both ;)",
     "Imagine when we don’t need Wi-Fi to say goodnight.",
     "You don’t even know how much I adore you. Or maybe you do.",
-    "I've never loved anyone the way I love you, Chai.",
-    "Hi Miss, pa-kiss.",
-    "Ikaw lang, palagi baby."
+    "I've never loved anyone the way I love you, Chai."
+    "You look extra cute when you pretend you’re not."
+    "Ikaw ang pinakapaborito kong asarin pero hindi ko inaasar :P"
+    "You're hotter than you think ;)"
   ];
 
   let affirmationIndex = -1;
@@ -359,7 +379,7 @@ function typeLetter() {
     const content = document.getElementById("affirmationContent");
 
     card.classList.remove("revealed");
-    content.textContent = "Click Here Baby 💌";
+    content.textContent = "Click Me 💌";
   };
 
   window.closeAffirmationModal = function () {
@@ -413,7 +433,7 @@ function typeLetter() {
 
 });
 
-const targetDate = new Date('2026-03-01T00:00:00'); // March 1
+const targetDate = new Date('2026-02-01T00:00:00'); // March 1
 
 function openLocked() {
   if (new Date() >= targetDate) {
@@ -427,15 +447,15 @@ function closeModal() {
   document.getElementById("revealModal").style.display = "none";
 }
 
+function goToMonthsary() {
+  window.location.href = "first-monthsary.html";
+}
 
+function goToMonthsary() {
+  const modal = document.getElementById("revealModal");
+  modal.style.opacity = "0";
 
-
-
-
-
-
-
-
-
-
-
+  setTimeout(() => {
+    window.location.href = "first-monthsary.html";
+  }, 400);
+}
