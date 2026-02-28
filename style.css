@@ -804,7 +804,7 @@ h2 {
 
 .affirmation-card {
   width: 90%;
-  max-width: 350px;
+  min-width: 350px;
   min-height: 220px;
   margin: 30px auto;
   border-radius: 30px;
@@ -1302,6 +1302,7 @@ body.music-playing::before {
     gap: 12px;
   }
 }
+
 
 
 
