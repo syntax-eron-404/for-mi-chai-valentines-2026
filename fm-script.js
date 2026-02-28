@@ -40,7 +40,7 @@ window.openLetter = function () {
   // Play music only if paused
   if (audio.paused) {
     audio.play().catch(() => {});
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   }
 
   setTimeout(typeLetter, 500);
@@ -184,7 +184,7 @@ updateTimeTogether();
 
     if (audio.paused) {
       audio.play();
-      playBtn.innerText = "⏸";
+      playBtn.innerText = "||";
     } else {
       audio.pause();
       playBtn.innerText = "▶";
@@ -203,7 +203,7 @@ updateTimeTogether();
     musicIndex = (musicIndex + 1) % songs.length;
     loadSong(musicIndex);
     audio.play();
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   };
 
   window.prevSong = function () {
@@ -324,91 +324,6 @@ updateTimeTogether();
 
 
   /* ===============================
-     💌 DID YOU KNOW MODAL
-  =============================== */
-
-  const affirmations = [
-    "I choose you on the easy days and on the overwhelming ones.",
-    "You make my world softer and brighter.",
-    "You matter to me in ways I can’t fully explain.",
-    "You are not too much. You are just right for me.",
-    "You make me want to be better, but never someone else.",
-    "Loving you feels like home.",
-    "With you, I don’t feel like I have to perform.",
-    "You are my favorite part of the day.",
-    "I’m proud of you, even on your quiet days.",
-    "Distance doesn’t make you smaller in my life.",
-    "I carry you with me in small ways every day.",
-    "You are worth the wait, the effort, and the time.",
-    "You are the most beautiful girl I know, baby.",
-    "You’re my favorite notification.",
-    "Ikaw ang pahinga ko kahit hindi ka nagpapahinga.",
-    "You make me soft. And I don’t even complain about it.",
-    "I’d still choose you. Kahit magsungit ka :P",
-    "You’re my calm… and sometimes my chaos. I like both ;)",
-    "Imagine when we don’t need Wi-Fi to say goodnight.",
-    "You don’t even know how much I adore you. Or maybe you do.",
-    "I've never loved anyone the way I love you, Chai."
-  ];
-
-  let affirmationIndex = -1;
-  let hasRevealed = false;
-
-  window.openAffirmationModal = function () {
-    const modal = document.getElementById("affirmationModal");
-    modal.classList.add("active");
-
-    hasRevealed = false;
-    affirmationIndex = -1;
-
-    const card = document.querySelector(".affirmation-card");
-    const content = document.getElementById("affirmationContent");
-
-    card.classList.remove("revealed");
-    content.textContent = "Click Me 💌";
-  };
-
-  window.closeAffirmationModal = function () {
-    document.getElementById("affirmationModal")
-      .classList.remove("active");
-  };
-
-  window.handleAffirmationClick = function () {
-    const card = document.querySelector(".affirmation-card");
-    const content = document.getElementById("affirmationContent");
-
-    let newIndex;
-    do {
-      newIndex = Math.floor(Math.random() * affirmations.length);
-    } while (newIndex === affirmationIndex);
-
-    affirmationIndex = newIndex;
-
-    card.classList.add("flash");
-
-    setTimeout(() => {
-      content.textContent = affirmations[affirmationIndex];
-      card.classList.add("revealed");
-      card.classList.remove("flash");
-    }, 200);
-
-    hasRevealed = true;
-  };
-
-
-  const body = document.body;
-
-  audio.addEventListener("play", () => {
-    body.classList.add("music-playing");
-  });
-
-  audio.addEventListener("pause", () => {
-    body.classList.remove("music-playing");
-  });
-
-
-
-  /* ===============================
      🚪 LOGOUT
   =============================== */
 
@@ -445,3 +360,4 @@ function goToMonthsary() {
     window.location.href = "first-monthsary.html";
   }, 400);
 }
+
