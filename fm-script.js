@@ -6,7 +6,7 @@ Happy 1st Monthsary, my love 🤍
 
 One month may sound small, but to me it already holds so many quiet moments, deep talks, misunderstandings we worked through, and little laughs that made everything lighter. I’m grateful for all of it — even the parts that challenged us — because they showed me that we’re willing to choose each other and grow.
 
-Thank you for loving me in your way, for trying, for reassuring me, and for staying. I know we’re still learning each other, and I don’t expect perfection — I just appreciate the effort and the heart behind it. That means more than you know.
+Thank you for loving me in your own way, for trying, for reassuring me, and for staying. I know we’re still learning each other, and I don’t expect perfection — I just appreciate the effort and the heart behind it. That means more than you know.
 
 Salamat, ikaw 'to. 
 
@@ -306,5 +306,6 @@ function goToMonthsary() {
     window.location.href = "first-monthsary.html";
   }, 400);
 }
+
 
 
