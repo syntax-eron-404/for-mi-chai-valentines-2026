@@ -218,40 +218,6 @@ updateTimeTogether();
     loadSong(musicIndex);
   }
 
-    // VOICE NOTE CARD
-  const voiceAudio = document.getElementById("voiceAudio");
-  const voiceBtn = document.getElementById("voicePlayBtn");
-
-  voiceBtn.addEventListener("click", () => {
-    if (!voiceAudio) return;
-
-    if (voiceAudio.paused) {
-      voiceAudio.play();
-      voiceBtn.classList.add("playing");
-    } else {
-      voiceAudio.pause();
-      voiceBtn.classList.remove("playing");
-    }
-  });
-
-  voiceAudio.addEventListener("ended", () => {
-    voiceBtn.classList.remove("playing");
-  });
-
-  /* Reset to play icon when voice ends */
-  voiceAudio.addEventListener("ended", () => {
-    voiceBtn.innerHTML = `
-      <svg viewBox="0 0 24 24">
-        <polygon points="8,5 19,12 8,19"></polygon>
-      </svg>`;
-  });
-
-
-  // Reset button when audio ends
-  voiceAudio.addEventListener("ended", () => {
-    voiceBtn.innerText = "▶";
-  });
-
 
   /* ===============================
      💖 CLICK FLOATING HEARTS
@@ -268,26 +234,6 @@ updateTimeTogether();
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 1000);
   });
-
-
-  // /* ===============================
-  //    🎈 FLOATING BALLOONS
-  // =============================== */
-
-  // function createBalloon() {
-  //   const balloon = document.createElement("div");
-  //   balloon.className = "balloon";
-  //   balloon.innerHTML = "💖";
-
-  //   balloon.style.left = Math.random() * 100 + "vw";
-  //   balloon.style.animationDuration = 6 + Math.random() * 5 + "s";
-
-  //   document.body.appendChild(balloon);
-  //   setTimeout(() => balloon.remove(), 10000);
-  // }
-
-  // setInterval(createBalloon, 1200);
-
 
   /* ===============================
      🖼 IMAGE MODAL
@@ -360,4 +306,5 @@ function goToMonthsary() {
     window.location.href = "first-monthsary.html";
   }, 400);
 }
+
 
