@@ -1,3 +1,7 @@
+/* =====================================
+   🌸 GLOBAL STYLES
+===================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -51,13 +55,13 @@ h2 {
 }
 
 .valentine-date {
-  font-family: 'Fredoka', sans-serif; 
+  font-family: 'Fredoka', sans-serif; /* clean contrast to cursive */
   font-size: clamp(1rem, 3vw, 1.5rem);
-  color: #ff758f;                       
+  color: #ff758f;                       /* softer pink */
   text-align: center;
   letter-spacing: 1px;
   margin: 0 0 30px;
-  opacity: 0.85;                        
+  opacity: 0.85;                        /* subtle effect */
 }
 
 
@@ -158,12 +162,12 @@ h2 {
 }
 
 .music-widget img {
-  width: 80px;         
-  height: 80px;       
-  object-fit: cover;   
-  border-radius: 50%;   
+  width: 80px;          /* adjust size as needed */
+  height: 80px;         /* keep width = height for perfect circle */
+  object-fit: cover;    /* ensures the image covers the area without distortion */
+  border-radius: 50%;   /* makes it circular */
   display: block;
-  margin: 0 auto;       
+  margin: 0 auto;       /* centers the image inside the widget */
 }
 
 
@@ -391,8 +395,8 @@ h2 {
 
 /* Hide scrollbar – Firefox */
 .letter-content {
-  scrollbar-width: none;    
-  -ms-overflow-style: none;   
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
 }
 
 .letter-content::after {
@@ -734,7 +738,7 @@ h2 {
   }
   
   .modal-controls {
-    flex-direction: row; 
+    flex-direction: row; /* keep buttons horizontal */
     gap: 10px;
   }
 
@@ -800,7 +804,7 @@ h2 {
 
 .affirmation-card {
   width: 90%;
-  width: 350px;
+  max-width: 350px;
   min-height: 220px;
   margin: 30px auto;
   border-radius: 30px;
@@ -943,6 +947,34 @@ h2 {
 @keyframes popUp {
   from {opacity: 0; transform: scale(0.7);}
   to {opacity: 1; transform: scale(1);}
+}
+
+/* Reveal button */
+.reveal-btn {
+  margin-top: 25px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ff6f91, #ff2e63);
+  color: white;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+  transition: all 0.3s ease;
+}
+
+.reveal-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 35px rgba(255, 77, 109, 0.55);
+}
+
+.reveal-btn:active {
+  transform: scale(0.98);
 }
 
 
@@ -1270,8 +1302,6 @@ body.music-playing::before {
     gap: 12px;
   }
 }
-
-
 
 
 
