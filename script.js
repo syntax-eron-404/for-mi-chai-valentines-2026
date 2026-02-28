@@ -55,7 +55,7 @@ window.openLetter = function () {
   // Play music only if paused
   if (audio.paused) {
     audio.play().catch(() => {});
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   }
 
   setTimeout(typeLetter, 500);
@@ -195,7 +195,7 @@ function typeLetter() {
 
     if (audio.paused) {
       audio.play();
-      playBtn.innerText = "⏸";
+      playBtn.innerText = "||";
     } else {
       audio.pause();
       playBtn.innerText = "▶";
@@ -214,7 +214,7 @@ function typeLetter() {
     musicIndex = (musicIndex + 1) % songs.length;
     loadSong(musicIndex);
     audio.play();
-    document.getElementById("playBtn").innerText = "⏸";
+    document.getElementById("playBtn").innerText = "||";
   };
 
   window.prevSong = function () {
@@ -459,4 +459,5 @@ function goToMonthsary() {
     window.location.href = "first-monthsary.html";
   }, 400);
 }
+
 
